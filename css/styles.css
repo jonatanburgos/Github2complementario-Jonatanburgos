@@ -21,6 +21,16 @@ body {
         font-size: 1.2rem;
         min-height: 100%;
 }
+.imagenfondocontacto{
+    background-image: url(../img/cine.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+        font-family: "Public Sans", sans-serif;
+        font-size: 1.2rem;
+        min-height: 100%;
+
+}
+
 
 .imagenfondoreseñas{
     background-image: url(../img/20887.jpg);
@@ -156,6 +166,7 @@ h1{
     border: solid 10px rgb(3, 13, 251) ;
 }
 
+
 .card__imagen{
     width: 1197px;
     height: 840px;
@@ -221,20 +232,28 @@ h1{
     font-family: 'Bebas Neue', cursive; 
 }
 
-.container{
-    display: grid;
-    grid-template-columns:repeat(2,1 fr);
-    grid-template-rows:20% auto 250px ;
-    grid-template-areas:
-    "header header "
-    "aside main"
-    "footer footer"
-;
+@media (max-width: 1199.98px){
+    .container{
+        text-align: center;
+        display: grid;
+        grid-template-columns:repeat(2,1 fr);
+        grid-template-rows:20% auto 250px ;
+        grid-template-areas:
+        "header header "
+        "aside main"
+        "footer footer"
+    ;
+    }
 }
+
+
 
 header{
     grid-area:header ;
     background-color: rgb(196, 238, 128);
+    font-family:'Bebas Neue', cursive;
+    font-weight: bold;
+    color: wheat;
 }
 
 main{
@@ -249,11 +268,14 @@ aside{
 
 footer{
     grid-area:footer ;
-    background-color: blue;
+    font-family:'Bebas Neue', cursive;
+    font-weight: bold;
+    color: wheat;
 }
 
-@media (max-widht:800px){
+@media screen and (max-widht:700px) and (min-width: 400px){
     .container{
+        text-align: right;
         grid-template-columns:1fr;
         grid-template-rows:20% auto auto 250px ;
         grid-template-areas:
@@ -265,6 +287,24 @@ footer{
     }
 }
 
-@media (max-widht:400px){
+.form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
 
+.container-inputs{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family:'Bebas Neue', cursive;
+    font-weight: bold;
+    color: wheat;
+}
+
+.iconify{
+    font-size: 50px;
 }
